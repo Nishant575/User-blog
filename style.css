@@ -1,0 +1,34 @@
+body{
+  background-color: #409EF2 ;
+  padding: 0px;
+  margin: 0px;
+}
+
+.card{
+
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2), 0 8px 22px 0 rgba(0, 0, 0, 0.19);
+  padding-left: 3rem;
+  padding-right: 3rem;
+  width: 30rem;
+  height: 33rem;
+}
+
+.form{
+
+  margin-top: 10%;
+}
+
+.form2{
+
+  margin-top: 10%;
+}
+
+.jumbotron{
+
+  padding: 2rem , 2rem;
+}
+
+.inv{
+
+  color: red;
+}
