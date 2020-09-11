@@ -23,7 +23,6 @@
       $user = $result->fetch_assoc();
 
       //Password checking
-       
       if(password_verify($password, $user['password']) )
       {
         $_SESSION['uid'] = $user['sno'];
@@ -55,51 +54,55 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <link rel="stylesheet" href="https://bootswatch.com/4/minty/bootstrap.min.css">
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <link rel="stylesheet" href="style.css">
     <title>Login</title>
   </head>
 
-  <body>
-    <div class="row justify-content-center form">
-      <div class="col-4">
-        <div class="card shadow p-3 mb-5 bg-white rounded">
-          <div class="card-body">
-            <div class="row justify-content-center">
-              <div class="col-5">
-                <h2 class = "card-title">Login</h2>
+  <body style="background-color: #A7EADC;">
+    <div class="container">
+
+
+      <div class="row justify-content-center form">
+        <div class="col-4">
+          <div class="card shadow p-3 mb-5 bg-white rounded">
+            <div class="card-body">
+              <div class="row justify-content-center">
+                <div class="col-5">
+                  <h2 class = "card-title">Login</h2>
+                </div>
               </div>
+              <div class="row form2">
+                <div class="col-12">
+                  <form class="" action="" method="post">
+                    <div class="form-group">
+                      <label for="formGroupExampleInput2">Email ID</label>
+                      <input type="email" class="form-control" id="formGroupExampleInput2" placeholder="" name="email">
+                    </div>
+                    <div class="form-group">
+                      <label for="formGroupExampleInput2">Password</label>
+                      <input type="password" class="form-control" id="formGroupExampleInput2" placeholder="" name="password">
+                    </div>
+                    <?php
+                        if(isset($errorMessage)){
+                          ?><p class="inv">Invalid password or email!</p>
+                          <?php
+                        }
+                    ?>
+                    <br>
+                    <div class="text-center">
+                      <button type="submit" class="btn btn-primary">Log in</button>
+                    </div>
+                    <br>
+                    <div class="text-center">
+                      <a href="signup.php">Create an account?</a>
+                    </div>
+                  </form>
+                </div>
             </div>
-            <div class="row form2">
-              <div class="col-12">
-                <form class="" action="" method="post">
-                  <div class="form-group">
-                    <label for="formGroupExampleInput2">Email ID</label>
-                    <input type="email" class="form-control" id="formGroupExampleInput2" placeholder="" name="email">
-                  </div>
-                  <div class="form-group">
-                    <label for="formGroupExampleInput2">Password</label>
-                    <input type="password" class="form-control" id="formGroupExampleInput2" placeholder="" name="password">
-                  </div>
-                  <?php
-                      if(isset($errorMessage)){
-                        ?><p class="inv">Invalid password or email!</p>
-                        <?php
-                      }
-                  ?>
-                  <br>
-                  <div class="text-center">
-                    <button type="submit" class="btn btn-primary">Log in</button>
-                  </div>
-                  <br>
-                  <div class="text-center">
-                    <a href="signup.php">Create an account?</a>
-                  </div>
-                </form>
-              </div>
-          </div>
+            </div>
           </div>
         </div>
       </div>

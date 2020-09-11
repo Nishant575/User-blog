@@ -39,22 +39,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href=https://bootswatch.com/4/lux/bootstrap.min.css>
+    <link rel="stylesheet" href="https://bootswatch.com/4/minty/bootstrap.min.css">
     <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">-->
   </head>
   <body>
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+        <!-- Brand -->
+        <a class="navbar-brand" href="#">HOME</a>
+
+        <!-- Toggler/collapsibe Button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar links -->
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="logout.php">Logout</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="deleteuser.php">Delete account</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <div class="jumbotron head">
-                  <div class="row justify-content-end logout ">
-                    <div class="col-2">
-                      <a href="logout.php" >Logout</a>
-                  </div>
-                </div>
+                <div class="jumbotron head text-light text-center">
+
                   <div class="row">
-                    <div class="col">
+                    <div class="col-12">
                   <?php
                     if($user === null) {
                       header("Location:login.php");
@@ -66,6 +83,7 @@
                    }
                  ?>
                </div>
+
              </div>
             </div>
             </div>
@@ -89,14 +107,14 @@
           <div class="row card-box">
               <div class="col-lg-9">
                   <div class="card">
-                      <div class="card-header h-40" style="padding-bottom: 0rem;">
+                      <div class="card-header h-40" style="padding-bottom: 0rem; background-color: rgb(179, 242, 217);">
                         <p><?=$message['date']?>   <?=$message['time']?></p>
                       </div>
                       <div class="card-body">
                         <p><?=$message['post']?></p>
 
                       </div>
-                      <div class="card-footer" style="padding-top: 0.2rem; padding-bottom: 0.2rem;">
+                      <div class="card-footer" style="padding-top: 0.2rem; padding-bottom: 0.2rem; background-color: rgb(179, 242, 217);">
                         <a class="card-link text-danger" href="deletepost.php?id=<?php echo $message['sno']?>">Delete</a>
                       </div>
                   </div>
