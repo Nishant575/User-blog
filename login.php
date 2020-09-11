@@ -23,7 +23,8 @@
       $user = $result->fetch_assoc();
 
       //Password checking
-      if($password == $user['password'])
+       
+      if(password_verify($password, $user['password']) )
       {
         $_SESSION['uid'] = $user['sno'];
         header("Location:index.php");

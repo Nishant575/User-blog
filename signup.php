@@ -16,7 +16,8 @@
 
     }
     else {
-      $sql="INSERT INTO `signup` ( `name`, `email`, `password`) VALUES ( '$name', '$email', '$password');";
+      $newpassword = password_hash($password, PASSWORD_DEFAULT);
+      $sql="INSERT INTO `signup` ( `name`, `email`, `password`) VALUES ( '$name', '$email', '$newpassword');";
 
       if($con->query($sql) == true)
         {
