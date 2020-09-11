@@ -16,6 +16,7 @@
 
     }
     else {
+      //password hash
       $newpassword = password_hash($password, PASSWORD_DEFAULT);
       $sql="INSERT INTO `signup` ( `name`, `email`, `password`) VALUES ( '$name', '$email', '$newpassword');";
 
