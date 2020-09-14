@@ -43,10 +43,10 @@
     <link rel="stylesheet" href="index.css">
     <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">-->
   </head>
-  <body>
+  <body style="background-color: #F7FFFF;">
     <nav class="navbar navbar-expand-md bg-dark navbar-dark">
         <!-- Brand -->
-        <a class="navbar-brand" href="#">HOME</a>
+        <a class="navbar-brand" href="#"><?= $user['name']?></a>
 
         <!-- Toggler/collapsibe Button -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -68,7 +68,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <div class="jumbotron head text-light text-center">
+                <div class="jumbotron head text-light text-center" style="background-color: #F7FFFF;">
 
                   <div class="row">
                     <div class="col-12">
